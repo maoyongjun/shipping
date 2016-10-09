@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_weight="1"
+            android:text="@string/shipping_title"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="@string/emp_title"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/emp_no"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/emp_tip"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@color/login_color"
+            android:text="@string/login"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="@string/ship_by"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/shipping_by"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginRight="110dp" />
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginLeft="40dp"
+            android:text="@string/dn_title"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/dn_no"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="@string/dn_tip"
+            android:singleLine="true"
+            android:textSize="18sp" />
+
+       <!--  <Button
+            android:id="@+id/dn_ok"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/dn_ok"
+            android:textSize="16sp" /> -->
+
+        <ImageButton
+            android:id="@+id/dn_ok"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/query"
+            android:src="@drawable/search" />
+
+        <ImageButton
+            android:id="@+id/scan_dn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/scan"
+            android:src="@drawable/scan"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="@string/model_name"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/model_name"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="@string/ship_qty"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ship_qty"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/scanningCode"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@color/scancolor"
+            android:text="@string/scanCode"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView android:id="@+id/unit_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/carton_list"
+            />
+        <TextView android:id="@+id/unit_qty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/carton_qty"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/listView_ship"
+            android:layout_width="match_parent"
+            android:layout_height="158dp" >
+
+        </ListView>
+
+    </LinearLayout>
+    <LinearLayout  android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:text="@string/scan_qty"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/scan_total_qty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/ship_btn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@color/ship_color"
+            android:text="@string/shipping_btn"
+            android:textSize="20sp" />
+        
+
+    </LinearLayout>
+   <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/ship_btn1"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@color/ship_color"
+            android:text="@string/shipping_btn"
+            android:textSize="20sp" />
+        
+
+    </LinearLayout>
+    
+
+
+</LinearLayout>
+</ScrollView>
